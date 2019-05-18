@@ -57,6 +57,17 @@ zstyle ":prezto:module:thefuck" bindkey "no"
 bindkey "\e\e" fuck-command-line
 ```
 
+### Conf File Location for Freshness Comparison
+By default, this module compares the freshness between `.zprezto` and the cache file. Once the `.zprezto` is modified and newer than the cache file, the
+cache will be regenerated.
+
+If you're not using Prezto, you may want to change the conf file used in the
+freshness comparison.
+
+```zsh
+zstyle ":prezto:runcom" zpreztorc "$HOME/.config/zsh/.zshrc"
+```
+
 ## Credit
 
 The shortcut function `fuck-command-line` is borrowed from [oh-my-zsh/plugins/thefuck][omz-thefuck].
