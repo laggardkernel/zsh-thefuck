@@ -24,15 +24,18 @@ if [[ -z $commands[thefuck] ]]; then
 fi
 
 # Set alias for thefuck
-  zstyle -s ':prezto:module:thefuck' alias \
-    'THEFUCK_ALIAS' || THEFUCK_ALIAS='fuck'
+zstyle -s ':prezto:module:thefuck' alias \
+  'THEFUCK_ALIAS' || THEFUCK_ALIAS='fuck'
+# Load custom location for runcom .zpreztorc
+zstyle -s ':prezto:runcom' zpreztorc \
+  'PREZTO_RUNCOM_ZPREZTORC' || PREZTO_RUNCOM_ZPREZTORC="${SDOTDIR:-$HOME/.zpreztorc}"
 
 # Register alias
 init_args=(--alias "$THEFUCK_ALIAS")
 
 cache_file="${TMPDIR:-/tmp}/thefuck-cache.$UID.zsh"
 if [[ "${commands[thefuck]}" -nt "$cache_file" \
-  || "${SDOTDIR:-$HOME/.zpreztorc}" -nt "$cache_file" \
+  || "$PREZTO_RUNCOM_ZPREZTORC" -nt "$cache_file" \
   || ! -s "$cache_file"  ]]; then
 
   # Cache init code.
