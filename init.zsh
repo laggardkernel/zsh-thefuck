@@ -17,9 +17,7 @@
 # path=("${0:h}/bin" "${path[@]}")
 # fpath=("${0:h}/functions" "${fpath[@]}")
 
-if [[ -z $commands[thefuck] ]]; then
-  echo 'thefuck is not installed, you should "pip install thefuck" or "brew install thefuck" first.'
-  echo 'See https://github.com/nvbn/thefuck#installation'
+if (( ! $+commands[thefuck] )); then
   return 1
 fi
 
