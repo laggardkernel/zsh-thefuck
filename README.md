@@ -18,7 +18,7 @@ with its amazing async [Turbo Mode][turbo mode].
 
 ```zsh
 zplugin ice wait'1' lucid
-zplugin light laggardkernel/thefuck
+zplugin light laggardkernel/zsh-thefuck
 ```
 
 ### [Prezto][prezto]
@@ -32,7 +32,7 @@ The only framework does **optimizations** in plugins with sophisticated coding s
 
 ```zsh
 mkdir -p ${ZDOTDIR:-$HOME}/.zprezto/contrib 2>/dev/null
-git clone https://github.com/laggardkernel/thefuck.git ${ZDOTDIR:-$HOME}/.zprezto/contrib/thefuck
+git clone https://github.com/laggardkernel/zsh-thefuck.git ${ZDOTDIR:-$HOME}/.zprezto/contrib/thefuck
 ```
 
 ## Settings
